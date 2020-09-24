@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="calculator.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <table class="table table-borderless">
+            <tr class="result">
+              <td colspan="5">
+                <div id="result" style="line-height: 50px;"></div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <button
+                  id="plus"
+                  onclick="appendAndSolve(this.id)"
+                  value="+"
+                  style="color: blue;"
+                  class="btn btn-light"
+                >
+                  +
+                </button>
+              </td>
+              <td>
+                <button
+                  id="minus"
+                  onclick="appendAndSolve(this.id)"
+                  value="-"
+                  style="color: blue;"
+                  class="btn btn-light"
+                >
+                  -
+                </button>
+              </td>
+              <td>
+                <button
+                  id="multiply"
+                  onclick="appendAndSolve(this.id)"
+                  value="×"
+                  style="color: blue;"
+                  class="btn btn-light"
+                >
+                  ×
+                </button>
+              </td>
+              <td>
+                <button
+                  id="divide"
+                  onclick="appendAndSolve(this.id);"
+                  value="÷"
+                  style="color: blue;"
+                  class="btn btn-light"
+                >
+                  ÷
+                </button>
+              </td>
+              <td>
+                <button
+                  id="square-root"
+                  onclick="appendAndSolve(this.id)"
+                  value="√"
+                  style="color: blue;"
+                  class="btn btn-light"
+                >
+                  √
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <button
+                  id="six"
+                  onclick="appendAndSolve(this.id)"
+                  value="6"
+                  class="btn btn-light"
+                >
+                  6
+                </button>
+              </td>
+              <td>
+                <button
+                  id="seven"
+                  onclick="appendAndSolve(this.id)"
+                  value="7"
+                  class="btn btn-light"
+                >
+                  7
+                </button>
+              </td>
+              <td>
+                <button
+                  id="eight"
+                  onclick="appendAndSolve(this.id)"
+                  value="8"
+                  class="btn btn-light"
+                >
+                  8
+                </button>
+              </td>
+              <td>
+                <button
+                  id="nine"
+                  onclick="appendAndSolve(this.id)"
+                  value="9"
+                  class="btn btn-light"
+                >
+                  9
+                </button>
+              </td>
+              <td rowspan="3">
+                <button
+                  id="answer"
+                  onclick="changeSymbol(this.id); appendAndSolve(this.id);"
+                  class="btn btn-primary"
+                >
+                  =
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <button
+                  id="two"
+                  onclick="appendAndSolve(this.id)"
+                  value="2"
+                  class="btn btn-light"
+                >
+                  2
+                </button>
+              </td>
+              <td>
+                <button
+                  id="three"
+                  onclick="appendAndSolve(this.id)"
+                  value="3"
+                  class="btn btn-light"
+                >
+                  3
+                </button>
+              </td>
+              <td>
+                <button
+                  id="four"
+                  onclick="appendAndSolve(this.id)"
+                  value="4"
+                  class="btn btn-light"
+                >
+                  4
+                </button>
+              </td>
+              <td>
+                <button
+                  id="five"
+                  onclick="appendAndSolve(this.id)"
+                  value="5"
+                  class="btn btn-light"
+                >
+                  5
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <button
+                  id="zero"
+                  onclick="appendAndSolve(this.id)"
+                  value="0"
+                  class="btn btn-light"
+                >
+                  0
+                </button>
+              </td>
+              <td>
+                <button
+                  id="decimal.point"
+                  onclick="appendAndSolve(this.id)"
+                  value="."
+                  class="btn btn-light"
+                >
+                  .
+                </button>
+              </td>
+              <td>
+                <button
+                  id="clear"
+                  onclick="appendAndSolve(this.id)"
+                  class="btn btn-danger"
+                >
+                  AC
+                </button>
+              </td>
+              <td>
+                <button
+                  id="one"
+                  onclick="appendAndSolve(this.id)"
+                  value="1"
+                  class="btn btn-light"
+                >
+                  1
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+
+    <script src="calculator.js"></script>
+  </body>
+</html>
