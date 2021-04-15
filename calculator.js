@@ -17,9 +17,15 @@ function changeSymbol(btnId) {
     res = document.getElementById("result").innerHTML;
     res = res.replace(/÷/g, "/");
     res = res.replace(/×/g, "*");
-    if (res.charAt(0) === "√") {
-      res = Math.sqrt(res.slice(1));
+    square_root = res.indexOf('√');
+
+    if (square_root > -1) {
+      sqrt_slice = res.slice(square_root + 1)
+      res2 = Math.sqrt(sqrt_slice);
+      res = res.slice(0, square_root);
+      res = res.concat(res2);
     }
     document.getElementById("result").innerHTML = eval(res);
   }
 }
+
